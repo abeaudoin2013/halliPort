@@ -1,9 +1,11 @@
 <template name="Projects">
 	<section class="projects">
 		{{#each projects}}
-		  <div class="project-preview">
-			  {{> ProjectPreview}}
-		  </div>
+		  <a class="project-preview-a" href="/projects/{{_id}}">
+			  <div class="project-preview">
+				  {{> ProjectPreview}}
+			  </div>
+		  </a>
 		{{/each}}
 	</section>
 </template>

@@ -11,6 +11,14 @@ FlowRouter.route('/projects', {
   	BlazeLayout.render('MainLayout', {main: 'Projects'});
   }
 });
+
+FlowRouter.route('/projects/:id', {
+  name: 'projects',
+  action() {
+    BlazeLayout.render('MainLayout', {main: 'Project'});
+  }
+});
+
 FlowRouter.route('/new-project', {
   name: 'new-project',
   action() {
@@ -23,4 +31,18 @@ FlowRouter.route('/login', {
 	action() {
   	BlazeLayout.render('MainLayout', {main: 'Login'});
   }
-})
+});
+
+FlowRouter.route('/about', {
+  name: 'about',
+  action() {
+    BlazeLayout.render('MainLayout', {main: 'About'});
+  }
+});
+
+FlowRouter.route('/reading', {
+  name: 'reading',
+  action() {
+    BlazeLayout.render('MainLayout', {main: 'Reading'});
+  }
+});

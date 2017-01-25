@@ -1,0 +1,31 @@
+<template name="Project">
+	{{#if Template.subscriptionsReady}}
+		<div class="project-container">
+			<div class="project-col">
+				<h1>{{project.name}}</h1>
+				<p>{{project.desc}}</p>
+			</div>
+			<div class="project-col">
+				
+				<div class="main-image-container">
+					<div id="main-image" data-link="{{firstPicture}}" style="background-image: url({{firstPicture}}); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+					<p id="main-image-desc"></p>
+				</div>
+				
+				<div id="project-gallery">
+				 
+				 {{#each pictures}}
+						{{#if checkNum @index}}
+							<div class="image image-selected" data-link="{{picture this}}" style="background-image: url({{picture this}}); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+					  {{else}}
+					    <div class="image" data-link="{{picture this}}" style="background-image: url({{picture this}}); background-repeat: no-repeat; background-size: cover; background-position: center;"></div>
+						{{/if}}
+				 {{/each}}
+
+				</div>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	{{/if}}
+</template>

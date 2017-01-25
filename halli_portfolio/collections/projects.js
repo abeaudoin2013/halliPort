@@ -34,7 +34,7 @@ ProjectSchema = new SimpleSchema({
 	},
 	pictures: {
     type: [String],
-    label: 'Choose file'
+    label: 'Add Pictures'
   },
   "pictures.$": {
     autoform: {

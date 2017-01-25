@@ -1,5 +1,5 @@
 Template.Nav.events({
 	'click .li': function () {
-		console.log(this);
+		console.log(window.location.href);
 	}
 })
