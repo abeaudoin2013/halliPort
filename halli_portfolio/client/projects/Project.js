@@ -12,7 +12,7 @@ Template.Project.onCreated(function () {
     self.subscribe('projects');
     self.subscribe('files.images.all');
 	});
-})
+});
 
 
 Template.Project.helpers({
@@ -46,7 +46,6 @@ Template.Project.events({
 	"click .image": function (evt) {
 		var $i = $(evt.target);
 		var url = $i.data("link");
-		console.log(url);
 		$i.addClass("image-selected");
 		$i.siblings().removeClass("image-selected");
 

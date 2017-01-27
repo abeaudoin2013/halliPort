@@ -1,11 +1,24 @@
 <template name="Projects">
+	{{> Timeline}}
 	<section class="projects">
+		<header id="projects-header">
+			<h1 class="projects-h1">Projects</h1>
+			<p class="projects-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque minima autem molestias blanditiis quibusdam suscipit unde natus doloribus, ea quia, minus dignissimos dolorem magnam aliquid officia tenetur ipsam perspiciatis eligendi.</p>
+		</header>
 		{{#each projects}}
+		  <div>
+		  {{this.year}}
+		  {{#each this.projects}}
+		    <p>{{this.name}}</p>
+		  {{/each}}
+		</div>
+		{{/each}}
+		<!-- {{#each projects}}
 		  <a class="project-preview-a" href="/projects/{{_id}}">
 			  <div class="project-preview">
 				  {{> ProjectPreview}}
 			  </div>
 		  </a>
-		{{/each}}
+		{{/each}} -->
 	</section>
 </template>
