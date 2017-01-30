@@ -1,6 +1,6 @@
 .projects
-  width 90%
-  margin 0 auto
+  width 80%
+  margin 0 auto 25px auto
   #projects-header
     text-align center
     .projects-h1
@@ -9,7 +9,45 @@
       margin-bottom 15px
     .projects-desc
       font-style italic
-	.project-preview
-	  width 300px
-	  display inline-block
-	  text-align center
+      margin 0 0 35px 0
+  .projects-container
+    border-top 2px solid $gold
+    padding 25px 0
+    display table
+    width 100%
+    height 300px
+    .year-container
+      display table-cell
+      vertical-align middle
+      width 25%
+      .year
+        margin 0
+        font-size 4em
+    .year-projects-container
+      display table-cell
+      vertical-align middle
+      width 75%
+      .project-preview
+        width 300px
+        display inline-block
+        text-align center
+        cursor pointer
+        vertical-align middle
+        transition(all .5s ease)
+        .project-preview-name
+          margin-top 0px
+          text-align left
+          font-style italic
+          font-size 14px
+          color #000
+          transition(all .5s ease)
+        .project-preview-image
+          width 200px
+          height 150px
+          transition(all .5s ease)
+      .project-preview:hover
+        .project-preview-name
+          font-weight bold
+        .project-preview-image
+          height 175px
+          width 225px

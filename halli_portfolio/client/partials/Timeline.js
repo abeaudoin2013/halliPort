@@ -54,7 +54,14 @@ Template.Timeline.helpers({
 	}
 });
 
-
+Template.Timeline.events({
+  "click .timeline-year-container": function (evt) {
+  	var id = $(evt.target).closest(".timeline-year-container").attr('id');
+  	$("#main").animate({
+  		scrollTop: $("#projects-" + id).offset().top
+  	}, 250)
+  }
+});
 
 
 

@@ -46,3 +46,10 @@ FlowRouter.route('/reading', {
     BlazeLayout.render('MainLayout', {main: 'Reading'});
   }
 });
+
+FlowRouter.route('/new-reading', {
+  name: 'new-reading',
+  action() {
+    BlazeLayout.render('MainLayout', {main: 'NewReading'});
+  }
+});

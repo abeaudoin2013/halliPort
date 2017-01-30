@@ -1,5 +1,7 @@
 <template name="Project">
 	{{#if Template.subscriptionsReady}}
+	{{> Timeline}}
+	  <p class="back-to-timeline"><a href="/projects"><i class="fa fa-chevron-left" aria-hidden="true"></i>Back to Timeline</a></p>
 		<div class="project-container">
 			<div class="project-col">
 				<h1>{{project.name}}</h1>

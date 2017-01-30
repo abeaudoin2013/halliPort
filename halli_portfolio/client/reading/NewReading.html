@@ -1,0 +1,7 @@
+<template name="NewReading">
+	<div class="new-project-container">
+		{{#if Template.subscriptionsReady }}
+			{{> quickForm collection="Readings" id="insertProjectForm" type="insert" class="new-project-form"}}
+		{{/if}}
+	</div>
+</template>

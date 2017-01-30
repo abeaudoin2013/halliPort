@@ -30,8 +30,16 @@ Template.Projects.helpers({
 
 			var year = currentTimeClone.subtract(i, 'years');
 			var yearClone = year.clone();
+			var yearClone2 = year.clone();
 
-			var projects = Projects.find({projectDate: {"$gte": yearClone._d, "$lt": yearClone.subtract(1, 'years')._d}});
+			// find projects between start of current year and end of year
+
+			var projects = Projects.find({
+				projectDate: {
+					"$gte": yearClone.startOf('year').toDate(),
+					"$lt": yearClone2.add(1, 'years').startOf('year').toDate()
+				}
+			});
 
 			projectYears[years - i].year = year.format("YYYY");
 			projectYears[years - i].projects = projects;
@@ -44,5 +52,24 @@ Template.Projects.helpers({
 
 		
 	}
+
+	// test: () => {
+	// 	var m = moment("2016-01-01");
+	// 	var m2 = m.clone();
+	// 	var m3 = m.clone();
+
+ //    var e = m2.toDate();
+ //    var s = m3.subtract(1, 'year').toDate();
+ //    console.log(e)
+ //    console.log(s)
+	// 	var projects = Projects.find({
+	// 		"projectDate": {
+	// 			"$gte": s,
+	// 			"$lt": e
+	// 		}
+	// 	});
+	// 	// var projects = Projects.find({});
+	// 	return projects;
+	// }
 });
 
