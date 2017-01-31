@@ -1,3 +1,5 @@
 <template name="Reading">
-	Recommended rEading
+	{{#if Template.subscriptionsReady}}
+		{{readings}}
+	{{/if}}
 </template>

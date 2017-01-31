@@ -13,17 +13,15 @@ ReadingSchema = new SimpleSchema({
 	},
 	link: {
 		type: String,
-		label: "Description"
+		label: "Link"
 	},
-	categories: {
+	category: {
     type: String,
-    label: "Categories"
+    label: "Category"
   },
 	pictures: {
-    type: [String],
-    label: 'Add Pictures'
-  },
-  "pictures.$": {
+    type: String,
+    label: 'Add Picture',
     autoform: {
       afFieldInput: {
         type: 'fileUpload',
