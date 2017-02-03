@@ -1,6 +1,35 @@
 @import 'var.styl'
 @import 'mixins.styl'
 
+.project-timeline-container
+  display block
+  #timeline
+    width 70%
+    margin 0 auto
+    padding 15px 0 0 0
+    .timeline-year-container
+      width 12.5%
+      height 50px
+      float left
+      display inline-block
+      padding 0 10px
+      box-sizing border-box
+      color $gold
+      .years
+        text-align center
+        margin 0
+        color rgba(0, 0, 0, .45)
+        transition(all .5s ease)
+        cursor pointer
+      .years:hover
+        color #000
+      .square-container
+        width 30px
+        margin 0 auto
+        .font-a
+          font-size .5em
+          float left
+          margin 0 2px 0 0
 .back-to-timeline
   margin 0
   color #000
@@ -26,7 +55,13 @@
     text-decoration none
 .project-container
   width 95%
-  margin 5% auto
+  height: 100%
+  margin: 5% auto 0 auto
+  .project-col-desk
+    visibility visible
+  .project-col-mob
+    visibility hidden
+    display none
   .project-col
     width 50%
     display inline-block
@@ -54,3 +89,29 @@
         border 3px solid $gold
       .image:hover
         border 3px solid $gold
+@media screen and (max-width 750px)
+  .back-to-timeline
+    margin-top 55px
+  .project-timeline-container
+    display none
+  .project-container
+    width 100%
+    background #000
+    .project-col-desk
+      display none
+    .project-col
+      width 100%
+      .main-image-container
+        width 100%
+        #main-image
+          border none
+      #project-gallery
+        width 90%
+        margin 25px auto
+      .project-col-mob
+        visibility visible
+        width 80%
+        margin 0 auto 50px auto
+        float none
+        display block
+        color #fff

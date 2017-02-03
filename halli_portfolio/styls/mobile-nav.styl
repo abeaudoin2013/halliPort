@@ -1,0 +1,54 @@
+@import 'var.styl'
+@import 'mixins.styl'
+
+.mn-container
+  display none
+  width 100%
+  height 99.5%
+  position fixed
+  z-index 5000
+  left -100%
+  border-left 5px solid #000
+  border-bottom 5px solid #000
+  border-right 5px solid #000
+  background-color #fff
+  .mn-sub-container
+    #close
+      color $gold
+      text-align right
+      text-transform uppercase
+      margin 15px 25px 0 0
+      cursor pointer
+      font-size 1.5em
+	  #nav
+	    max-height 89.5vh
+	    height 81.4vh
+	    #ul
+	      padding 0
+	      margin 0 0 0 15px
+	      .li
+	        list-style-type none
+	        padding 10px 0 10px 5px
+	        text-transform uppercase
+	        font-size 1.5em
+	        a
+	          color #000
+	          text-decoration none
+	        a:focus
+	          color #000
+	          text-decoration none
+	        a:hover
+	          color #000
+	          text-decoration none
+	      .li-selected
+	        background-color #000
+	        color #fff
+	        a
+	          color #fff
+	        a:hover
+	          color #fff
+	        a:focus
+	          color #fff
+@media screen and (max-width 750px)
+  .mn-container
+    display block

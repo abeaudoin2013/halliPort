@@ -28,11 +28,12 @@
       vertical-align middle
       width 75%
       .project-preview
-        width 300px
+        width 225px
         display inline-block
         text-align center
         cursor pointer
         vertical-align middle
+        margin 0 0 20px 0
         transition(all .5s ease)
         .project-preview-name
           margin-top 0px
@@ -51,3 +52,36 @@
         .project-preview-image
           height 175px
           width 225px
+@media screen and (max-width 750px)
+  .projects
+    width 83%
+    display inline-block
+    margin 25px 0 0 15px
+    padding 0 15px 0 0
+    .projects-container
+      display block
+      height auto
+      .year-container
+        display block
+        width 100%
+        margin-bottom 25px
+        .year
+          text-align center
+          font-size 2em
+      .year-projects-container
+        display block
+        width: 90%;
+        margin: 0 auto;
+        .project-preview
+          width 8em
+          height 10em
+          margin 0 15px 20px 0
+          .project-preview-image
+            width 100%
+            height 70%
+        .project-preview:hover
+          .project-preview-name
+            font-weight bold
+          .project-preview-image
+            width 100%
+            height 70%

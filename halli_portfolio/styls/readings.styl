@@ -1,16 +1,16 @@
 @import 'var.styl'
 @import 'mixins.styl'
 
-.Reading-container
+.Readings-container
   width 80%
   margin 0 auto 25px auto
-	#Reading-header
+	#Readings-header
 	  text-align center
-	  .Reading-h1
+	  .Readings-h1
 	    font-size 4em
 	    text-transform uppercase
 	    margin-bottom 15px
-	  .Reading-desc
+	  .Readings-desc
 	    font-style italic
 	    margin 0 0 35px 0
 	.Reading-section
@@ -31,35 +31,84 @@
       display table-cell
       vertical-align middle
       width 75%
-      .Reading-a
+      .Reading-container
+        width 225px
         display inline-block
-        float left
-        transition(all .5s ease)
-        text-decoration none
-        color #000
-        .Reading-name
-          margin-top 0px
-          text-align left
-          font-style italic
-          font-size 14px
-          color #000
-          transition(all .5s ease)
-        .Reading-preview
+        text-align center
+        cursor pointer
+        vertical-align middle
+        margin 0 0 20px 0
+        transition(all .5s ease)  
+        .Reading-a
           display inline-block
-          text-align center
-          cursor pointer
-          vertical-align middle
-          width 200px
-          height 150px
+          float left
           transition(all .5s ease)
-      .Reading-a:hover
-        text-decoration none
-        color #000
-        .Reading-name
-          font-weight bold
-        .Reading-preview
-          height 175px
-          width 225px
-      .Reading-a:focus
-        text-decoration none
-        color #000
+          text-decoration none
+          color #000
+          .Reading-name
+            margin-top 0px
+            text-align left
+            font-style italic
+            font-size 14px
+            color #000
+            transition(all .5s ease)
+          .Reading-preview
+            display inline-block
+            text-align center
+            cursor pointer
+            vertical-align middle
+            width 200px
+            height 150px
+            transition(all .5s ease)
+      .Reading-container:hover
+        .Reading-a:hover
+          text-decoration none
+          color #000
+          .Reading-name
+            font-weight bold
+          .Reading-preview
+            height 175px
+            width 225px
+        .Reading-a:focus
+          text-decoration none
+          color #000
+
+@media screen and (max-width 750px)
+  .Readings-container
+    width 95%
+    margin 60px auto 25px auto
+    height 100vh
+    .Reading-section
+      display block
+      .Reading-category
+        display block
+        width 100%
+        margin 0 0 35px 0
+        .category
+          font-size 4em
+          text-align center
+      .Readings
+        display block
+        width 100%
+        .Reading-container
+          width 8em
+          height 10em
+          margin 0 15px 20px 0
+          .Reading-a
+            width 100%
+            float none
+            height 100%
+            .Reading-preview
+              width 100%
+              height 70%
+        .Reading-container:hover
+          width 8em
+          height 10em
+          margin 0 15px 20px 0
+          .Reading-a
+            width 100%
+            float none
+            height 100%
+            .Reading-preview
+              width 100%
+              height 70%

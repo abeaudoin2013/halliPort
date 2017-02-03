@@ -1,0 +1,35 @@
+@import 'var.styl'
+@import 'mixins.styl'
+
+.mh-container
+  display none
+  margin 0 0 15px 0
+  .mh-sub-container
+    display table
+    width 100%
+    border-right: 5px solid #000;
+    .mh-items
+      display table-cell
+      vertical-align middle
+      padding-top 10px
+      padding-bottom 10px
+      text-transform uppercase
+      font-size 1.5em
+    #mh-menu
+      color $gold
+      padding-left 2%
+      cursor pointer
+    #mh-logo
+      color #000
+      text-align right
+      padding-right 2%
+      border-right: 5px solid #000;
+
+@media screen and (max-width: 750px)
+	.mh-container
+		display block
+		position fixed
+		top 0
+		border-top 5px solid #000
+		width 100%
+		background-color #fff

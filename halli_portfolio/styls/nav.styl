@@ -1,0 +1,40 @@
+@import 'var.styl'
+@import 'mixins.styl'
+
+#sidebar
+  display inline-block
+  width 20%
+  #logo
+    border-bottom 5px solid #000
+    padding 25px 0
+  #nav
+    max-height 89.5vh
+    height 81.4vh
+    #ul
+      padding 0
+      margin 15px 0 0 0
+      .li
+        list-style-type none
+        padding 5px 0 5px 5px
+        text-transform uppercase
+        a
+          color #000
+          text-decoration none
+        a:focus
+          color #000
+          text-decoration none
+        a:hover
+          color #000
+          text-decoration none
+      .li-selected
+        background-color #000
+        color #fff
+        a
+          color #fff
+        a:hover
+          color #fff
+        a:focus
+          color #fff
+@media screen and (max-width 750px)
+  #sidebar
+    display none
