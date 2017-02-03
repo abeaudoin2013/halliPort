@@ -1,0 +1,27 @@
+<template name="Readings">
+	{{#if Template.subscriptionsReady}}
+		<div class="Reading-container">
+			<header id="Reading-header">
+				<h1 class="Reading-h1">Recommended Reading</h1>
+				<p class="Reading-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque minima autem molestias blanditiis quibusdam suscipit unde natus doloribus, ea quia, minus dignissimos dolorem magnam aliquid officia tenetur ipsam perspiciatis eligendi.</p>
+			</header>
+			{{#each readings.names}}
+			  <section class="Reading-section">
+				  <div class="Reading-category">
+				  	<h1 class="category">{{this}}</h1>
+				  </div>
+				  <div class="Readings">
+				  	{{#each pullReadings readings this}}
+							<a class="Reading-a" href="{{this.readings.link}}" target="_blank">
+								<h3 class="Reading-name">{{this.readings.name}}</h3>
+								<div class="Reading-preview" style="background-image: url({{image.link}}); background-repeat: no-repeat; background-size: cover; background-position: center">
+									<!-- {{>Reading this.readings}} -->
+								</div>
+							</a>
+						{{/each}}
+					</div>
+				</section>
+			{{/each}}
+		</div>
+	{{/if}}
+</template>

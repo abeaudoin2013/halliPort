@@ -1,5 +1,4 @@
 <template name="Reading">
-	{{#if Template.subscriptionsReady}}
-		{{readings}}
-	{{/if}}
+	<h3 class="Reading-name">{{name}}</h3>
+  <div class="Reading-image" style="background-image: url({{imageFile.link}}); background-repeat: no-repeat; background-size: cover; background-position: center" ></div>
 </template>

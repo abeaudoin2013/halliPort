@@ -40,10 +40,10 @@ FlowRouter.route('/about', {
   }
 });
 
-FlowRouter.route('/reading', {
-  name: 'reading',
+FlowRouter.route('/readings', {
+  name: 'readings',
   action() {
-    BlazeLayout.render('MainLayout', {main: 'Reading'});
+    BlazeLayout.render('MainLayout', {main: 'Readings'});
   }
 });
 

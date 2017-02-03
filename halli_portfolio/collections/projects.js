@@ -8,7 +8,8 @@ Images = new FilesCollection({
     } else {
       return 'Please upload image, with size equal or less than 10MB';
     }
-  }
+  },
+  storagePath: "./imgs"
 });
 
 Projects = new Meteor.Collection('projects');
