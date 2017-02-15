@@ -1,10 +1,20 @@
 <template name="Nav">
 	<nav id="nav">
 		<ul id="ul">
-			<li class="li" id="home"><a href="/">home</a></li>
-			<li class="li" id="projects"><a href="/projects">projects</a></li>
-			<li class="li" id="about"><a href="/about">about</a></li>
-			<li class="li" id="reading"><a href="/readings">recommended reading</a></li>
+			<a href="/"><li class="li" id="home">home</li></a>
+			<a href="/projects"><li class="li" id="projects">projects</li></a>
+			{{#if admin}}
+			  <a href="/new-project"><li class="li" id="new-project">add project</li></a>
+			{{/if}}
+			<a href="/about"><li class="li" id="about">about</li></a>
+			<a href="/readings"><li class="li" id="reading">recommended reading</li></a>
+			{{#if admin}}
+			  <a href="/new-reading"><li class="li" id="new-reading">add reading</li></a>
+			{{/if}}
+			{{#if currentUser}}
+			  <li class="li" id="logout">logout</li>
+			{{/if}}
+			
 		</ul>
   </nav>
 </template>

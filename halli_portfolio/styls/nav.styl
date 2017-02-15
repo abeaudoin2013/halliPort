@@ -4,37 +4,39 @@
 #sidebar
   display inline-block
   width 20%
+  height 100vh
   #logo
     border-bottom 5px solid #000
     padding 25px 0
+    text-align center
   #nav
     max-height 89.5vh
     height 81.4vh
     #ul
       padding 0
       margin 15px 0 0 0
-      .li
-        list-style-type none
-        padding 5px 0 5px 5px
+      a
+        color #000
+        text-decoration none
+        .li
+          list-style-type none
+          padding 5px 0 5px 25px
+          text-transform uppercase
+        .li-selected
+          background-color #000
+          color #fff
+      a:focus
+        color #000
+        text-decoration none
+      a:hover
+        color #000
+        text-decoration none
+      #logout
+        color #000
         text-transform uppercase
-        a
-          color #000
-          text-decoration none
-        a:focus
-          color #000
-          text-decoration none
-        a:hover
-          color #000
-          text-decoration none
-      .li-selected
-        background-color #000
-        color #fff
-        a
-          color #fff
-        a:hover
-          color #fff
-        a:focus
-          color #fff
+        padding 5px 0 5px 25px
+        list-style-type none
+        cursor pointer
 @media screen and (max-width 750px)
   #sidebar
     display none

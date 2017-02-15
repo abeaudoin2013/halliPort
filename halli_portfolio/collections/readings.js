@@ -9,7 +9,7 @@ Readings.allow({
 ReadingSchema = new SimpleSchema({
 	name: {
 		type: String,
-		label: "Name of Project"
+		label: "Name of Reading"
 	},
 	link: {
 		type: String,
@@ -18,6 +18,11 @@ ReadingSchema = new SimpleSchema({
 	category: {
     type: String,
     label: "Category"
+  },
+  addCategory: {
+    type: String,
+    label: "Add New Category",
+    optional: true
   },
 	pictures: {
     type: String,
@@ -32,3 +37,11 @@ ReadingSchema = new SimpleSchema({
 });
 
 Readings.attachSchema(ReadingSchema);
+
+// AutoForm.hooks({
+//   insertReadingForm: {
+//     onSubmit: function (doc) {
+//       console.log(doc);
+//     }
+//   }
+// })

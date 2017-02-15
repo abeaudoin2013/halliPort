@@ -1,7 +1,21 @@
 <template name="NewReading">
-	<div class="new-project-container">
-		{{#if Template.subscriptionsReady }}
-			{{> quickForm collection="Readings" id="insertReadingForm" type="insert" class="new-project-form"}}
-		{{/if}}
-	</div>
+	{{#if admin}}
+		<div class="new-project-container">
+			{{#if Template.subscriptionsReady }}
+				{{#autoForm collection="Readings" id="insertReadingForm" type="insert" class="new-project-form"}}
+				  {{> afQuickField name='name' id="reading-name"}}
+				  {{> afQuickField name='link' id="reading-link"}}
+				  {{> afQuickField name='category' options=categoryOptions id="category"}}
+					{{#if afFieldValueIs name="category" value="add"}}
+					  {{> afQuickField name='addCategory' id="add-category"}}
+					{{/if}}
+				  {{> afQuickField name='pictures' id="reading-pictures"}}
+				  <!-- on submit adds addCategory to category and selects it -->
+					<button type="submit" class="btn btn-primary">Insert</button>
+				{{/autoForm}}
+			{{/if}}
+		</div>
+	{{else}}
+	  {{redirect}}
+	{{/if}}
 </template>

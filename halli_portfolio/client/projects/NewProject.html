@@ -1,7 +1,11 @@
 <template name="NewProject">
-	<div class="new-project-container">
-		{{#if Template.subscriptionsReady }}
-			{{> quickForm collection="Projects" id="insertProjectForm" type="insert" class="new-project-form"}}
-		{{/if}}
-	</div>
+	{{#if admin}}
+		<div class="new-project-container">
+			{{#if Template.subscriptionsReady }}
+				{{> quickForm collection="Projects" id="insertProjectForm" type="insert" class="new-project-form"}}
+			{{/if}}
+		</div>
+  {{else}}
+    {{redirect}}
+  {{/if}}
 </template>

@@ -5,8 +5,17 @@
 			<ul id="ul">
 				<li class="li" id="home"><a href="/">home</a></li>
 				<li class="li" id="projects"><a href="/projects">projects</a></li>
+				{{#if admin}}
+				  <li class="li" id="new-project"><a href="/new-project">add project</a></li>
+				{{/if}}
 				<li class="li" id="about"><a href="/about">about</a></li>
 				<li class="li" id="reading"><a href="/readings">recommended reading</a></li>
+				{{#if admin}}
+				  <li class="li" id="new-reading"><a href="/new-reading">add reading</a></li>
+				{{/if}}
+				{{#if currentUser}}
+					<li class="li" id="logout">logout</li>
+				{{/if}}
 			</ul>
 	  </nav>
 	</div>

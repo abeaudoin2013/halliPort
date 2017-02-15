@@ -2,7 +2,7 @@ Template.Project.onRendered(function () {
  if(!this._rendered) {
       this._rendered = true;
       $("#projects").addClass("li-selected");
-      $("#projects").siblings().removeClass("li-selected");
+      $("#projects").closest("a").siblings().find("li").removeClass("li-selected");
     }
 });
 

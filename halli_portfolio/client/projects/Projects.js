@@ -5,7 +5,7 @@ Template.Projects.rendered = function () {
  if(!this._rendered) {
       this._rendered = true;
       $("#projects").addClass("li-selected");
-      $("#projects").siblings().removeClass("li-selected");
+      $("#projects").closest("a").siblings().find("li").removeClass("li-selected");
     }
 };
 
@@ -52,24 +52,5 @@ Template.Projects.helpers({
 
 		
 	}
-
-	// test: () => {
-	// 	var m = moment("2016-01-01");
-	// 	var m2 = m.clone();
-	// 	var m3 = m.clone();
-
- //    var e = m2.toDate();
- //    var s = m3.subtract(1, 'year').toDate();
- //    console.log(e)
- //    console.log(s)
-	// 	var projects = Projects.find({
-	// 		"projectDate": {
-	// 			"$gte": s,
-	// 			"$lt": e
-	// 		}
-	// 	});
-	// 	// var projects = Projects.find({});
-	// 	return projects;
-	// }
 });
 
